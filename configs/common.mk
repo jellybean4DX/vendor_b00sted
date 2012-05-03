@@ -55,7 +55,6 @@ PRODUCT_PACKAGES += \
 
 #Common Blobs 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PREBUILT)/app/Usb.apk:system/app/Usb.apk \
     $(COMMON_PREBUILT)/app/Superuser.apk:system/app/Superuser.apk \
     $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     $(COMMON_PREBUILT)/app/ApexLauncher_v1.1.0.apk:system/app/ApexLauncher_v1.1.0.apk \
