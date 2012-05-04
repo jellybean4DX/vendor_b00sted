@@ -85,12 +85,12 @@
                    bitRate="3500000"
                    width="720"
                    height="480"
-                   frameRate="20" />
+                   frameRate="24" />
 
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
-                   channels="2" />
+                   channels="1" />
         </EncoderProfile>
 
         <EncoderProfile quality="high" fileFormat="mp4" duration="30">
@@ -98,12 +98,12 @@
                    bitRate="2000000"
                    width="640"
                    height="480"
-                   frameRate="20" />
+                   frameRate="15" />
 
             <Audio codec="aac"
                    bitRate="96000"
                    sampleRate="48000"
-                   channels="2" />
+                   channels="1" />
         </EncoderProfile>
 
         <EncoderProfile quality="low" fileFormat="3gp" duration="30">
@@ -150,15 +150,15 @@
         minFrameRate="1" maxFrameRate="30" />
 
     <VideoEncoderCap name="m4v" enabled="true"
-        minBitRate="64000" maxBitRate="8000000"
-        minFrameWidth="176" maxFrameWidth="1280"
-        minFrameHeight="144" maxFrameHeight="720"
-        minFrameRate="1" maxFrameRate="30" />
+        minBitRate="64000" maxBitRate="2000000"
+        minFrameWidth="176" maxFrameWidth="640"
+        minFrameHeight="144" maxFrameHeight="480"
+        minFrameRate="1" maxFrameRate="15" />
 
     <AudioEncoderCap name="aac" enabled="true"
         minBitRate="8192" maxBitRate="96000"
         minSampleRate="16000" maxSampleRate="48000"
-        minChannels="1" maxChannels="2" />
+        minChannels="1" maxChannels="1" />
 
     <AudioEncoderCap name="amrnb" enabled="true"
         minBitRate="5525" maxBitRate="12200"
