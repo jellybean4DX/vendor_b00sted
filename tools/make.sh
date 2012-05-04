@@ -32,11 +32,11 @@ OUTFILE=out/target/product/shadow/b00stedICS-$BUILD.zip
 MD5=out/target/product/shadow/b00stedICS-$BUILD.zip.md5sum
 
 if [ $TYPE = "b" ]; then
-	cp "$OUTFILE" ~/firstencounter/www/tests/"$OUTFILE"
-	cp "$MD5" ~/firstencounter/www/tests/"$MD5"
+	cp "$OUTFILE" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip
+	cp "$MD5" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/firstencounter/www/"$OUTFILE"
-	cp "$MD5" ~/firstencounter/www/"$MD5"
+	cp "$OUTFILE" ~/firstencounter/www/b00stedICS-"$BUILD".zip
+	cp "$MD5" ~/firstencounter/www/b00stedICS-"$BUILD".zip.md5sum
 fi
 . ~/firstencounter/upload_files.sh
 
