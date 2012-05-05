@@ -51,6 +51,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     PhaseBeam \
+    AppWidgetPicker \
     openvpn
 
 #Common Blobs 
@@ -62,7 +63,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/app/FMRadioService.apk:system/app/FMRadioService.apk \
     $(COMMON_PREBUILT)/app/Mms.apk:system/app/Mms.apk \
     $(COMMON_PREBUILT)/bin/fmradioserver:system/bin/fmradioserver \
-    $(COMMON_PREBUILT)/etc/apns-conf.xml:system/etc/apns-conf.xml \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
     $(COMMON_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
@@ -206,7 +206,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.telephony.call_ring.delay=0 \
         video.accelerate.hw=1 \
         persist.sys.use_dithering=0 \
-        ro.kernel.checkjni=0 
+        ro.kernel.checkjni=0
 
 # Inherit common build version
 -include vendor/b00sted/configs/common_versions.mk
