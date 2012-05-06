@@ -9,6 +9,10 @@ TYPE=$2
 CLEAN=$3
 sed -i "s|TYPE=.*|TYPE=${TYPE}|" vendor/b00sted/configs/common_versions.mk
 
+## Do this until we figure out why perms are dropped each repo sync
+chmod +x vendor/b00sted/tools/opticharger
+chmod +x vendor/b00sted/tools/squisher
+
 . build/envsetup.sh
 
 lunch b00stedICS_shadow-userdebug
@@ -29,6 +33,7 @@ BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
 OUTFILE=out/target/product/shadow/b00stedICS-$BUILD.zip
 MD5=out/target/product/shadow/b00stedICS-$BUILD.zip.md5sum
+
 #####################################################
 # START_TEMP
 # // Temp workaround for apns being overrridden
@@ -42,6 +47,7 @@ make -j$CORE bacon
 
 #END_TEMP
 #####################################################
+
 if [ $TYPE = "b" ]; then
 	cp "$OUTFILE" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip
 	cp "$MD5" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip.md5sum
