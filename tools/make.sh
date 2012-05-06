@@ -23,14 +23,25 @@ fi
 # So for test builds on -j6 after make clean type:
 # . vendor/b00sted/tools/make.sh 6 b y
 
-
 # Auto upload
 ## // need to have the realdate be same one from build, i.e read from squisher maybe?
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
 OUTFILE=out/target/product/shadow/b00stedICS-$BUILD.zip
 MD5=out/target/product/shadow/b00stedICS-$BUILD.zip.md5sum
+#####################################################
+# START_TEMP
+# // Temp workaround for apns being overrridden
 
+rm -f $OUTFILE 
+rm -f $MD5
+
+cp -f vendor/b00sted/prebuilt/etc/apns-conf.xml out/target/product/shadow/system/etc/apns-conf.xml
+
+make -j$CORE bacon 
+
+#END_TEMP
+#####################################################
 if [ $TYPE = "b" ]; then
 	cp "$OUTFILE" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip
 	cp "$MD5" ~/firstencounter/www/tests/b00stedICS-"$BUILD".zip.md5sum
@@ -38,6 +49,7 @@ else
 	cp "$OUTFILE" ~/firstencounter/www/b00stedICS-"$BUILD".zip
 	cp "$MD5" ~/firstencounter/www/b00stedICS-"$BUILD".zip.md5sum
 fi
+
 . ~/firstencounter/upload_files.sh
 
 
