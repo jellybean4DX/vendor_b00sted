@@ -8,11 +8,11 @@
 # INPUT
 DEVICE=shadow
 REPO=$1
-CORE=$2
-TYPE=$3
-CLEAN=$4
+CLEAN=$2
+CORE=$3
+TYPE=$4
 sed -i "s|TYPE=.*|TYPE=${TYPE}|" vendor/b00sted/configs/common_versions.mk
-CLEAN=$5
+
 
 if [ $REPO = "y" ]; then
 	repo sync -j$CORE
