@@ -144,13 +144,6 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PREBUILT)/lib/libvisualizer.so:system/lib/libvisualizer.so \
 	$(COMMON_PREBUILT)/lib/libxloudwrapper.so:system/lib/libxloudwrapper.so 
 
-#Bootmenu modules 
-PRODUCT_COPY_FILES += $(shell \
-  find $(COMMON_PREBUILT)/lib/modules -name '*.ko' \
-  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-  | tr '\n' ' ')
-
-
 #BootMenu files
 PRODUCT_COPY_FILES += \
 	$(COMMON_PREBUILT)/bin/hijack:system/bin/hijack \

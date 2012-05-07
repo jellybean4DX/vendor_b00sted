@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
         
 #BOOTMENU modules || shadow 
 PRODUCT_COPY_FILES += $(shell \
-  find $(COMMON_PREBUILT)bootmenu/shadow/lib/modules -name '*.ko' \
+  find $(COMMON_PREBUILT)/bootmenu/shadow/lib/modules -name '*.ko' \
   | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
   | tr '\n' ' ')
 
