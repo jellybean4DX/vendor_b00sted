@@ -8,8 +8,9 @@
 # INPUT
 DEVICE=droid2we
 REPO=$1
-CORE=$2
-TYPE=$3
+CLEAN=$2
+CORE=$3
+TYPE=$4
 sed -i "s|TYPE=.*|TYPE=${TYPE}|" vendor/b00sted/configs/common_versions.mk
 CLEAN=$5
 
