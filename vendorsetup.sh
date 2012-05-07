@@ -1,1 +1,3 @@
 add_lunch_combo b00stedICS_shadow-userdebug
+add_lunch_combo b00stedICS_droid2-userdebug
+add_lunch_combo b00stedICS_droid2we-userdebug
