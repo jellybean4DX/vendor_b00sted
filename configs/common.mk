@@ -66,6 +66,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/app/FMRadioService.apk:system/app/FMRadioService.apk \
     $(COMMON_PREBUILT)/app/Mms.apk:system/app/Mms.apk \
     $(COMMON_PREBUILT)/bin/fmradioserver:system/bin/fmradioserver \
+    $(COMMON_PREBUILT)/bin/su:system/bin.su \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
     $(COMMON_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
