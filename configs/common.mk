@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     Superuser \
     Superuser.apk \
     su \
-    audio_effects.conf
+    audio_effects.conf \
+    ThemeChooser
 
 # Optional packages
 PRODUCT_PACKAGES += \
