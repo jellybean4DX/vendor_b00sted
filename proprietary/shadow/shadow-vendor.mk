@@ -26,4 +26,4 @@ PRODUCT_PACKAGES := \
 PRODUCT_COPY_FILES := \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
-$(call inherit-product, vendor/motorola/shadow/shadow-vendor-blobs.mk)
+$(call inherit-product, vendor/b00sted/proprietary/shadow/shadow-vendor-blobs.mk)

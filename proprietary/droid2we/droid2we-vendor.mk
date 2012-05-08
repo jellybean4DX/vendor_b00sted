@@ -29,4 +29,4 @@ PRODUCT_COPY_FILES := \
 # Pick up overlay for features that depend on non-open-source files
 #DEVICE_PACKAGE_OVERLAYS := vendor/motorola/droid2we/overlay
 
-$(call inherit-product, vendor/motorola/droid2we/droid2we-vendor-blobs.mk)
+$(call inherit-product, vendor/b00sted/proprietary/droid2we/droid2we-vendor-blobs.mk)
