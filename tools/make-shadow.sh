@@ -56,18 +56,18 @@ cp -f vendor/b00sted/prebuilt/temp/shadow/camera.omap3.so out/target/product/sha
 make -j$CORE bacon 
 
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
-OUTFILE=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip
-MD5=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip.md5sum
+OUTFILE=out/target/product/shadow/$BUILD.zip
+MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
 #END_TEMP
 #####################################################
 
 if [ $TYPE = "b" ]; then
 	cp "$OUTFILE" ~/firstencounter/www/shadow/nightlies/b00stedICS-"$DEVICE"-"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/shadow/nightlies/b00stedICS-"$BUILD".zip.md5sum
+	cp "$MD5" ~/firstencounter/www/shadow/nightlies/"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/firstencounter/www/shadow/b00stedICS-"$DEVICE"-"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/shadow/b00stedICS-"$DEVICE"-"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/firstencounter/www/shadow/"$BUILD".zip
+	cp "$MD5" ~/firstencounter/www/shadow/"$BUILD".zip.md5sum
 fi
 
 . ~/firstencounter/upload_files.sh

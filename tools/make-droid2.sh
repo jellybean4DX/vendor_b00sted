@@ -40,8 +40,8 @@ fi
 ## // need to have the realdate be same one from build, i.e read from squisher maybe?
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
-OUTFILE=out/target/product/droid2/b00stedICS-$DEVICE-$BUILD.zip
-MD5=out/target/product/droid2/b00stedICS-$DEVICE-$BUILD.zip.md5sum
+OUTFILE=out/target/product/droid2/$BUILD.zip
+MD5=out/target/product/droid2/$BUILD.zip.md5sum
 
 #####################################################
 # START_TEMP
@@ -63,11 +63,11 @@ MD5=out/target/product/droid2/b00stedICS-$DEVICE-$BUILD.zip.md5sum
 #####################################################
 
 if [ $TYPE = "b" ]; then
-	cp "$OUTFILE" ~/firstencounter/www/droid2/nightlies/b00stedICS-"$DEVICE"-"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/droid2/nightlies/b00stedICS-"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/firstencounter/www/droid2/nightlies/"$BUILD".zip
+	cp "$MD5" ~/firstencounter/www/droid2/nightlies/"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/firstencounter/www/droid2/b00stedICS-"$DEVICE"-"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/droid2/b00stedICS-"$DEVICE"-"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/firstencounter/www/droid2/"$BUILD".zip
+	cp "$MD5" ~/firstencounter/www/droid2/"$BUILD".zip.md5sum
 fi
 
 . ~/firstencounter/upload_files.sh

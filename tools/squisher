@@ -148,12 +148,12 @@ rm -rf $REPACK/ota/recovery
         REALDATE=`date +%F-%H_%M`
 
 	if [ $TYPE = "b" ]; then
-		BUILD="$TYPE"_"$MAJOR"_"$REALDATE"
+		BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"_"$REALDATE"
 	else
-        	BUILD="$TYPE"_"$MAJOR"
+        	BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"
 	fi
 
-	OUTFILE=$OUT/b00stedICS-$BUILD.zip
+	OUTFILE=$OUT/$BUILD.zip
 	echo BUILD : "$BUILD"
 	# for auto upload 
 	echo "$BUILD" | cat >> vendor/b00sted/latest
