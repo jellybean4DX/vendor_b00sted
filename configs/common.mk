@@ -88,6 +88,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     $(COMMON_PREBUILT)/usr/keylayout/sholes-keypad.kl:system/usr/keylayout/sholes-keypad.kl
 
+# Bring in all audio files
+include frameworks/base/data/sounds/NewAudio.mk
+
+# Extra Ringtones
+include frameworks/base/data/sounds/AudioPackageNewWave.mk
+
 #Audio Enhancement
 PRODUCT_COPY_FILES += \
 	$(COMMON_PREBUILT)/bin/basimage_ibeats.bin:system/bin/basimage_ibeats.bin \
