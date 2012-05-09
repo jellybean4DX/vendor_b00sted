@@ -37,8 +37,17 @@ PRODUCT_PACKAGES += \
     Superuser \
     Superuser.apk \
     su \
-    audio_effects.conf \
-    ThemeChooser
+    audio_effects.conf
+
+# TMo ThemeChooser
+PRODUCT_PACKAGES += \
+       ThemeManager \
+       ThemeChooser \
+       com.tmobile.themes
+
+# ThemeChooser Permissions
+PRODUCT_COPY_FILES += \
+       vendor/b00sted/prebuilt/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # Optional packages
 PRODUCT_PACKAGES += \
