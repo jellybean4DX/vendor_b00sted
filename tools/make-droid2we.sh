@@ -51,9 +51,7 @@ rm -f $OUTFILE
 rm -f $MD5
 
 cp -f vendor/b00sted/prebuilt/temp/apns-conf-gsm.xml out/target/product/droid2we/system/etc/apns-conf.xml
-
-# See if commits fixed cam
-#cp -f vendor/b00sted/prebuilt/temp/droid2we/camera.omap3.so out/target/product/droid2we/system/lib/hw/camera.omap3.so
+cp -f vendor/b00sted/prebuilt/temp/droid2we/camera.omap3.so out/target/product/droid2we/system/lib/hw/camera.omap3.so
 
 make -j$CORE bacon 
 

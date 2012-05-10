@@ -51,8 +51,7 @@ rm -f $OUTFILE
 rm -f $MD5
 
 cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/shadow/system/etc/apns-conf.xml
-# See if Johnman's commits fixed camera
-#cp -f vendor/b00sted/prebuilt/temp/shadow/camera.omap3.so out/target/product/shadow/system/lib/hw/camera.omap3.so
+cp -f vendor/b00sted/prebuilt/temp/shadow/camera.omap3.so out/target/product/shadow/system/lib/hw/camera.omap3.so
 
 make -j$CORE bacon 
 
