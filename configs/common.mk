@@ -39,15 +39,8 @@ PRODUCT_PACKAGES += \
     su \
     audio_effects.conf
 
-# TMo ThemeChooser
-PRODUCT_PACKAGES += \
-       ThemeManager \
-       ThemeChooser \
-       com.tmobile.themes
-
-# ThemeChooser Permissions
-PRODUCT_COPY_FILES += \
-       vendor/b00sted/prebuilt/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+#TMo Theme Engine 
+include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
