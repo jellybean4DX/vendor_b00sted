@@ -1,16 +1,19 @@
 # Inherit from shadow device
 $(call inherit-product, device/motorola/shadow/shadow.mk)
+# Inherit b00sted common
 $(call inherit-product, vendor/b00sted/configs/common.mk)
+# Inherit omap3 common
+$(call inherit-product, vendor/b00sted/configs/omap3.mk)
 #Inherit from omap34com
 $(call inherit-product, device/motorola/omap34com/device.mk)
 $(call inherit-product, device/motorola/omap34com/full_omap34com.mk)
 
 #Release Name
 PRODUCT_RELEASE_NAME := Shadow
-COMMON_PREBUILT := vendor/b00sted/prebuilt
+COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay
-PRODUCT_BOOTMENU := vendor/b00sted/prebuilt/bootmenu/shadow
+PRODUCT_BOOTMENU := vendor/b00sted/prebuilt/common/bootmenu/shadow
 
 #include apns-conf
 PRODUCT_COPY_FILES += \

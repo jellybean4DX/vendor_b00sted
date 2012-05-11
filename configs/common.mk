@@ -20,11 +20,10 @@
 
 
 #Common
-# general for now // will be merged to common once ported from DX
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/dictionaries
-COMMON_PREBUILT := vendor/b00sted/prebuilt
-COMMON_BOOTMENU := vendor/b00sted/prebuilt/bootmenu/common
+COMMON_PREBUILT := vendor/b00sted/prebuilt/common
+COMMON_BOOTMENU := vendor/b00sted/prebuilt/common/bootmenu/common
 
 
 
@@ -59,33 +58,25 @@ PRODUCT_PACKAGES += \
     AppWidgetPicker \
     openvpn
 
-#Common Blobs 
-PRODUCT_COPY_FILES += \
-    $(COMMON_PREBUILT)/app/Superuser.apk:system/app/Superuser.apk \
-    $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    $(COMMON_PREBUILT)/app/ApexLauncher_v1.1.1.apk:system/app/ApexLauncher_v1.1.1.apk \
-    $(COMMON_PREBUILT)/app/FMRadio.apk:system/app/FMRadio.apk \
-    $(COMMON_PREBUILT)/app/FMRadioService.apk:system/app/FMRadioService.apk \
-    $(COMMON_PREBUILT)/app/Mms.apk:system/app/Mms.apk \
-    $(COMMON_PREBUILT)/bin/fmradioserver:system/bin/fmradioserver \
-    $(COMMON_PREBUILT)/bin/su:system/bin.su \
-    $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
-    $(COMMON_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
-    $(COMMON_PREBUILT)/etc/init.d/97lagfix:system/etc/init.d/97lagfix \
-    $(COMMON_PREBUILT)/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    $(COMMON_PREBUILT)/lib/libFMRadio.so:system/lib/libFMRadio.so \
-    $(COMMON_PREBUILT)/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
-    $(COMMON_PREBUILT)/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
-    $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip \
-    $(COMMON_PREBUILT)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    $(COMMON_PREBUILT)/usr/keylayout/sholes-keypad.kl:system/usr/keylayout/sholes-keypad.kl
-
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk
 
 # Extra Ringtones
 include frameworks/base/data/sounds/AudioPackageNewWave.mk
+
+
+
+#Common Blobs 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PREBUILT)/app/Superuser.apk:system/app/Superuser.apk \
+    $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
+    $(COMMON_PREBUILT)/app/ApexLauncher_v1.1.1.apk:system/app/ApexLauncher_v1.1.1.apk \
+    $(COMMON_PREBUILT)/app/Mms.apk:system/app/Mms.apk \
+    $(COMMON_PREBUILT)/bin/su:system/bin.su \
+    $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
+    $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
+    $(COMMON_PREBUILT)/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
 
 #Audio Enhancement
 PRODUCT_COPY_FILES += \

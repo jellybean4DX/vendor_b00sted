@@ -4,13 +4,19 @@ $(call inherit-product, vendor/b00sted/configs/common.mk)
 #Inherit from omap34com
 $(call inherit-product, device/motorola/omap34com/device.mk)
 $(call inherit-product, device/motorola/omap34com/full_omap34com.mk)
+# Inherit from droid2we device
+$(call inherit-product, device/motorola/droid2we/droid2we.mk)
+# Inherit b00sted common
+$(call inherit-product, vendor/b00sted/configs/common.mk)
+# Inherit omap3 common
+$(call inherit-product, vendor/b00sted/configs/omap3.mk)
 
 #Release Name
 PRODUCT_RELEASE_NAME := Droid2we
-COMMON_PREBUILT := vendor/b00sted/prebuilt
+COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay
-PRODUCT_BOOTMENU := vendor/b00sted/prebuilt/bootmenu/droid2
+PRODUCT_BOOTMENU := vendor/b00sted/prebuilt/common/bootmenu/droid2
 
 #include apns-conf
 PRODUCT_COPY_FILES += \
