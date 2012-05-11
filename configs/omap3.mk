@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-COMMON_PREBUILT := vendor/b00sted/prebuilt/omap3
+OMAP3_PREBUILT := vendor/b00sted/prebuilt/omap3
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/frameworks
 
 # Common Blobs
