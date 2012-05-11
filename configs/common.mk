@@ -196,6 +196,12 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_BOOTMENU)/script/recovery_rzr.sh:/system/bootmenu/script/recovery_rzr.sh \
 	$(COMMON_BOOTMENU)/script/sdcard.sh:/system/bootmenu/script/sdcard.sh \
 	$(COMMON_BOOTMENU)/script/system.sh:/system/bootmenu/script/system.sh 
+
+#BOOTMENU modules || common
+PRODUCT_COPY_FILES += $(shell \
+  find $(COMMON_PREBUILT)/bootmenu/common/lib/modules -name '*.ko' \
+  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+  | tr '\n' ' ')
     
 #Common prop overrides
 PRODUCT_PROPERTY_OVERRIDES += \
