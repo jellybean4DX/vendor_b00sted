@@ -49,8 +49,8 @@ MD5=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip.md5sum
 
 rm -f $OUTFILE 
 rm -f $MD5
-
-cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/shadow/system/etc/apns-conf.xml
+# Test with change to shadow.mk
+#cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/shadow/system/etc/apns-conf.xml
 # Test with new framework changes
 #cp -f vendor/b00sted/prebuilt/temp/shadow/camera.omap3.so out/target/product/shadow/system/lib/hw/camera.omap3.so
 
