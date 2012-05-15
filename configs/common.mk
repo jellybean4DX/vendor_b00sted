@@ -32,7 +32,6 @@ COMMON_BOOTMENU := vendor/b00sted/prebuilt/common/bootmenu/common
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
-    SpareParts \
     Superuser \
     Superuser.apk \
     su \
@@ -45,7 +44,6 @@ include vendor/b00sted/configs/themes_common.mk
 PRODUCT_PACKAGES += \
     MusicFX \
     FileManager \
-    VideoEditor \
     VoiceDialer \
     SoundRecorder \
     Basic \

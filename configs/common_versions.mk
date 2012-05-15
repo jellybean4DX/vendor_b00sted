@@ -5,6 +5,8 @@ BUILD_VERSION_TAGS=release-keys \
 USER=teamb00sted \
 BUILD_UTC_DATE=$(shell date +"%s")
 
+
+
 # Naming system
 # 
 # Public releases are donoted 'build_#'
@@ -13,9 +15,14 @@ BUILD_UTC_DATE=$(shell date +"%s")
 
 TYPE=build
 MAJOR=2
-
+REALDATE=`date +%F-%H_%M`
+ifeq ( $(TYPE), b ) 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.modversion=$(TYPE)_$(MAJOR)-$(REALDATE)
+else
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=$(TYPE)_$(MAJOR)
+endif
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
