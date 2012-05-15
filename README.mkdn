@@ -2,3 +2,30 @@ vendor_b00sted
 ==============
 
 teamb00sted vendor
+
+
+To utilize this repo and use the make scripts they run as follows:
+
+	. vendor/b00sted/tools/make-"device_name".sh "repo sync y/n" "make clean y/n" "-j#" "build type"
+
+SO for a repo sync, and a nightly built after a make clean for the shadow with -j6 it would be the following command:
+
+	. vendor/b00sted/tools/make-shadow.sh y y 6 b 
+
+==============
+Please note that there is also a generic make script available for cm builds in general.
+
+As you can see by the input required:
+	REPO=$1
+	CLEAN=$2
+	LUNCH=$3
+	TYPE=$4
+	CORE=$5 
+
+That a y/n is required for repo, a y/n is required for clean, lunch combo is required, the build type, and the core to build at is also required.  So for a repo sync, make clean, and a shadow build with userdebug at -j6 would be:
+
+	. /path/to/your/make_script.sh y y shadow userdebug 6
+
+
+
+

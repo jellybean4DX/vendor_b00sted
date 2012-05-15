@@ -37,7 +37,8 @@ fi
 
 
 # Auto upload
-## // need to have the realdate be same one from build, i.e read from squisher maybe?
+## SERVER CHANGE || THIS WILL BE MODIFIED SOON
+
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
 OUTFILE=out/target/product/droid2/$BUILD.zip
@@ -50,8 +51,8 @@ MD5=out/target/product/droid2/$BUILD.zip.md5sum
 rm -f $OUTFILE 
 rm -f $MD5
 
-cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/droid2/system/etc/apns-conf.xml
-cp -f vendor/b00sted/prebuilt/temp/droid2/camera.omap3.so out/target/product/droid2/system/lib/hw/camera.omap3.so
+#cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/droid2/system/etc/apns-conf.xml
+#cp -f vendor/b00sted/prebuilt/temp/droid2/camera.omap3.so out/target/product/droid2/system/lib/hw/camera.omap3.so
 
 make -j$CORE bacon 
 
