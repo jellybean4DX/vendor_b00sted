@@ -6,7 +6,7 @@
 ########################################################################
 
 # INPUT
-DEVICE=htc_inc
+DEVICE=shadow
 REPO=$1
 CLEAN=$2
 CORE=$3
@@ -37,42 +37,20 @@ fi
 
 
 # Auto upload
-## SERVER CHANGE || THIS WILL BE MODIFIED SOON
-
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
 OUTFILE=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip
 MD5=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip.md5sum
 
-#####################################################
-# START_TEMP
-# // Temp workaround for apns being overrridden
-
-rm -f $OUTFILE 
-rm -f $MD5
-# Test with change to device makefiles
-#cp -f vendor/b00sted/prebuilt/temp/apns-conf.xml out/target/product/shadow/system/etc/apns-conf.xml
-# Test with new framework changes
-#cp -f vendor/b00sted/prebuilt/temp/shadow/camera.omap3.so out/target/product/shadow/system/lib/hw/camera.omap3.so
-
-make -j$CORE bacon 
-
-BUILD=` cat "vendor/b00sted/latest" | tail -1`
-OUTFILE=out/target/product/shadow/$BUILD.zip
-MD5=out/target/product/shadow/$BUILD.zip.md5sum
-
-#END_TEMP
-#####################################################
 
 if [ $TYPE = "b" ]; then
-	cp "$OUTFILE" ~/firstencounter/www/htc_inc/nightlies/"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/htc_inc/nightlies/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/b00stedICS/shadow/nightlies/"$BUILD".zip
+	cp "$MD5" ~/www/b00stedICS/shadow/nightlies/"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/firstencounter/www/htc_inc/"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/htc_inc/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/b00stedICS/shadow/"$BUILD".zip
+	cp "$MD5" ~/www/b00stedICS/shadow/"$BUILD".zip.md5sum
 fi
 
-. ~/firstencounter/upload_files.sh
 
 
 

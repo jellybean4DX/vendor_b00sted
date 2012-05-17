@@ -19,17 +19,19 @@ PRODUCT_COPY_FILES += \
 $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
 
 #BOOTMENU recovery files
-PRODUCT_COPY_FILES += \
-    $(PRODUCT_BOOTMENU)/recovery/cwm-recovery.zip:/system/bootmenu/recovery/cwm-recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/recovery.zip:/system/bootmenu/recovery/recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/rzr-recovery.zip:/system/bootmenu/recovery/rzr-recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/update-binary:/system/bootmenu/recovery/update-binary 
+# Wait for next bootmenu update
+#PRODUCT_COPY_FILES += \
+#    $(PRODUCT_BOOTMENU)/recovery/cwm-recovery.zip:/system/bootmenu/recovery/cwm-recovery.zip \
+#   $(PRODUCT_BOOTMENU)/recovery/recovery.zip:/system/bootmenu/recovery/recovery.zip \
+#    $(PRODUCT_BOOTMENU)/recovery/rzr-recovery.zip:/system/bootmenu/recovery/rzr-recovery.zip \
+#    $(PRODUCT_BOOTMENU)/recovery/update-binary:/system/bootmenu/recovery/update-binary 
         
 #BOOTMENU modules || htc_inc 
-PRODUCT_COPY_FILES += $(shell \
-  find $(COMMON_PREBUILT)/bootmenu/htc_inc/lib/modules -name '*.ko' \
-  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-  | tr '\n' ' ')
+# Wait for next bootmenu update
+#PRODUCT_COPY_FILES += $(shell \
+#  find $(COMMON_PREBUILT)/bootmenu/htc_inc/lib/modules -name '*.ko' \
+#  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+#  | tr '\n' ' ')
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := b00stedICS_htc_inc

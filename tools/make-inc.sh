@@ -35,22 +35,20 @@ else
 	time make -j$CORE bacon
 fi
 
-## SERVER CHANGE || THIS WILL BE MODIFIED SOON
 # Auto upload
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
-OUTFILE=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip
-MD5=out/target/product/shadow/b00stedICS-$DEVICE-$BUILD.zip.md5sum
+OUTFILE=out/target/product/htc_inc/b00stedICS-$DEVICE-$BUILD.zip
+MD5=out/target/product/htc_inc/b00stedICS-$DEVICE-$BUILD.zip.md5sum
+
 
 if [ $TYPE = "b" ]; then
-	cp "$OUTFILE" ~/firstencounter/www/htc_inc/nightlies/"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/htc_inc/nightlies/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/b00stedICS/htc_inc/nightlies/"$BUILD".zip
+	cp "$MD5" ~/www/b00stedICS/htc_inc/nightlies/"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/firstencounter/www/htc_inc/"$BUILD".zip
-	cp "$MD5" ~/firstencounter/www/htc_inc/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/b00stedICS/htc_inc/"$BUILD".zip
+	cp "$MD5" ~/www/b00stedICS/htc_inc/"$BUILD".zip.md5sum
 fi
-
-. ~/firstencounter/upload_files.sh
 
 
 
