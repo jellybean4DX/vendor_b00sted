@@ -1,5 +1,7 @@
 # Inherit from shadow device
 $(call inherit-product, device/motorola/shadow/shadow.mk)
+# Inherit b00sted common
+$(call inherit-product, vendor/b00sted/configs/common.mk)
 # Inherit omap3 common
 $(call inherit-product, vendor/b00sted/configs/omap3.mk)
 #Inherit from omap34com
@@ -33,9 +35,6 @@ PRODUCT_COPY_FILES += $(shell \
   find $(COMMON_PREBUILT)/bootmenu/shadow/lib/modules -name '*.ko' \
   | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
   | tr '\n' ' ')
-
-# Inherit b00sted common
-$(call inherit-product, vendor/b00sted/configs/common.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := b00stedICS_shadow
