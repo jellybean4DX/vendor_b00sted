@@ -44,11 +44,11 @@ MD5=out/target/product/droid2we/b00stedICS-$DEVICE-$BUILD.zip.md5sum
 
 
 if [ $TYPE = "b" ]; then
-	cp "$OUTFILE" ~/www/b00stedICS/droid2we/nightlies/"$BUILD".zip
-	cp "$MD5" ~/www/b00stedICS/droid2we/nightlies/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/droid2we/nightlies/"$BUILD".zip
+	cp "$MD5" ~/www/droid2we/nightlies/"$BUILD".zip.md5sum
 else
-	cp "$OUTFILE" ~/www/b00stedICS/droid2we/"$BUILD".zip
-	cp "$MD5" ~/www/b00stedICS/droid2we/"$BUILD".zip.md5sum
+	cp "$OUTFILE" ~/www/droid2we/"$BUILD".zip
+	cp "$MD5" ~/www/droid2we/"$BUILD".zip.md5sum
 fi
 
 
