@@ -3,7 +3,9 @@ PRODUCT_PACKAGES += \
        ThemeManager \
        ThemeChooser \
        com.tmobile.themes \
-       Androidian
+       Bubble \
+       Spearmint
+       
 
 # ThemeChooser Permissions
 PRODUCT_COPY_FILES += \
