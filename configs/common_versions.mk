@@ -14,7 +14,7 @@ BUILD_UTC_DATE=$(shell date +"%s")
 # Zip name is set in squisher based on vars below
 
 TYPE=build
-MAJOR=2
+MAJOR=3
 REALDATE=`date +%F-%H_%M`
 ifeq ( $(TYPE), b ) 
 PRODUCT_PROPERTY_OVERRIDES += \

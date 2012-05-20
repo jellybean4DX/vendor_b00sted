@@ -39,8 +39,8 @@ fi
 # Auto upload
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
-OUTFILE=out/target/product/droid2we/b00stedICS-$DEVICE-$BUILD.zip
-MD5=out/target/product/droid2we/b00stedICS-$DEVICE-$BUILD.zip.md5sum
+OUTFILE=out/target/product/droid2we/$BUILD.zip
+MD5=out/target/product/droid2we/$BUILD.zip.md5sum
 
 
 if [ $TYPE = "b" ]; then
