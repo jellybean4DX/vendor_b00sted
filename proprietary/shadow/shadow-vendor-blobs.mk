@@ -191,8 +191,7 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/lib/libusc.so:/system/lib/libusc.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/lights.shadow.so:/system/lib/hw/lights.shadow.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/sensors.shadow.so:/system/lib/hw/sensors.shadow.so \
-    $(PRODUCT_PROPRIETARY)/lib/hw/gps.shadow.so:/system/lib/hw/gps.shadow.so \
-    $(PRODUCT_PROPRIETARY)/usr/keylayout/sholes-keypad.kl:/system/usr/keylayout/sholes-keypad.kl \
+    $(PRODUCT_PROPRIETARY)/lib/hw/gps.shadow.so:/system/lib/hw/gps.shadow.so
 
 
 
