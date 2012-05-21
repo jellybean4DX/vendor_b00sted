@@ -68,7 +68,7 @@ include frameworks/base/data/sounds/AudioPackageNewWave.mk
 PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/app/Superuser.apk:system/app/Superuser.apk \
     $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    $(COMMON_PREBUILT)/app/ApexLauncher_v1.1.1.apk:system/app/ApexLauncher_v1.1.1.apk \
+    $(COMMON_PREBUILT)/app/ApexLauncher_v1.2.0.apk:system/app/ApexLauncher_v1.2.0.apk \
     $(COMMON_PREBUILT)/bin/su:system/bin/su \
     $(COMMON_PREBUILT)/bin/sysinit:system/bin/sysinit \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
