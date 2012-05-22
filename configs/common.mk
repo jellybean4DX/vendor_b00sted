@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     PhaseBeam \
     AppWidgetPicker \
-    openvpn
+    openvpn \
+    Apollo
 
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk
