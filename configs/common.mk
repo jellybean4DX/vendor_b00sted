@@ -42,7 +42,7 @@ include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
-    MusicFX \
+    DSPManager \
     FileManager \
     VoiceDialer \
     SoundRecorder \
