@@ -51,6 +51,10 @@ else
 	cp "$MD5" ~/www/shadow/"$BUILD".zip.md5sum
 fi
 
+if [ $TYPE = "test" ]; then
+	cp "$OUTFILE" ~/www/tests/"$BUILD".zip
+	cp "$MD5" ~/www/tests/"$BUILD".zip.md5sum
+fi
 
 
 
