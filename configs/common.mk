@@ -76,7 +76,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
     $(COMMON_PREBUILT)/etc/init.d/90userinit:system/etc/init.d/90userinit \
     $(COMMON_PREBUILT)/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
+    $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip \
+    $(COMMON_PREBUILT)/xbin/su:system/xbin/su \
 
 #Audio Enhancement
 PRODUCT_COPY_FILES += \
