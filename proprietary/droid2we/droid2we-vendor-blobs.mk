@@ -95,25 +95,6 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
     $(PRODUCT_PROPRIETARY)/etc/wifi/tiwlan_ap.ini:/system/etc/wifi/tiwlan_ap.ini \
     $(PRODUCT_PROPRIETARY)/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/baseimage.dof:/system/lib/dsp/baseimage.dof \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/conversions.dll64P:/system/lib/dsp/conversions.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/h264vdec_sn.dll64P:/system/lib/dsp/h264vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/h264venc_sn.dll64P:/system/lib/dsp/h264venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/jpegenc_sn.dll64P:/system/lib/dsp/jpegenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/m4venc_sn.dll64P:/system/lib/dsp/m4venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mp3dec_sn.dll64P:/system/lib/dsp/mp3dec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mp4vdec_sn.dll64P:/system/lib/dsp/mp4vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mpeg4aacdec_sn.dll64P:/system/lib/dsp/mpeg4aacdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mpeg4aacenc_sn.dll64P:/system/lib/dsp/mpeg4aacenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/nbamrdec_sn.dll64P:/system/lib/dsp/nbamrdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/nbamrenc_sn.dll64P:/system/lib/dsp/nbamrenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/postprocessor_dualout.dll64P:/system/lib/dsp/postprocessor_dualout.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/ringio.dll64P:/system/lib/dsp/ringio.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/usn.dll64P:/system/lib/dsp/usn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wbamrdec_sn.dll64P:/system/lib/dsp/wbamrdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wbamrenc_sn.dll64P:/system/lib/dsp/wbamrenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wmadec_sn.dll64P:/system/lib/dsp/wmadec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wmv9dec_sn.dll64P:/system/lib/dsp/wmv9dec_sn.dll64P \
     $(PRODUCT_PROPRIETARY)/lib/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \
     $(PRODUCT_PROPRIETARY)/lib/libarcsoftpe.so:/system/lib/libarcsoftpe.so \
     $(PRODUCT_PROPRIETARY)/lib/libarcsoft.so:/system/lib/libarcsoft.so \

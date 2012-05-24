@@ -28,7 +28,6 @@ PRODUCT_COPY_FILES := \
     $(PRODUCT_PROPRIETARY)/lib/libril_rds.so:obj/lib/libril_rds.so \
     $(PRODUCT_PROPRIETARY)/lib/librds_util.so:obj/lib/librds_util.so \
     $(PRODUCT_PROPRIETARY)/lib/libsmiledetect.so:obj/lib/libsmiledetect.so
-# vendor/motorola/shadow/proprietary/lib/hw/gralloc.omap3.so:obj/lib/hw/gralloc.omap3.so
 
 PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/app/ExtDispService.apk:/system/app/ExtDispService.apk \
@@ -102,29 +101,6 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/etc/permissions/com.motorola.android.nativehdmiapis_v1.xml:/system/etc/permissions/com.motorola.android.nativehdmiapis_v1.xml \
     $(PRODUCT_PROPRIETARY)/framework/com.motorola.android.iextdispservice.jar:/system/framework/com.motorola.android.iextdispservice.jar \
     $(PRODUCT_PROPRIETARY)/framework/com.motorola.android.nativehdmiapis_v1.jar:/system/framework/com.motorola.android.nativehdmiapis_v1.jar \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/baseimage.dof:/system/lib/dsp/baseimage.dof \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/conversions.dll64P:/system/lib/dsp/conversions.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/h264vdec_sn.dll64P:/system/lib/dsp/h264vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/h264venc_sn.dll64P:/system/lib/dsp/h264venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/720p_h264vdec_sn.dll64P:/system/lib/dsp/720p_h264vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/720p_h264venc_sn.dll64P:/system/lib/dsp/720p_h264venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/jpegenc_sn.dll64P:/system/lib/dsp/jpegenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/m4venc_sn.dll64P:/system/lib/dsp/m4venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/m4venc_sn.dll64P:/system/lib/dsp/720p_m4venc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mp3dec_sn.dll64P:/system/lib/dsp/mp3dec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mp4vdec_sn.dll64P:/system/lib/dsp/mp4vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mp4vdec_sn.dll64P:/system/lib/dsp/720p_mp4vdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mpeg4aacdec_sn.dll64P:/system/lib/dsp/mpeg4aacdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/mpeg4aacenc_sn.dll64P:/system/lib/dsp/mpeg4aacenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/nbamrdec_sn.dll64P:/system/lib/dsp/nbamrdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/nbamrenc_sn.dll64P:/system/lib/dsp/nbamrenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/postprocessor_dualout.dll64P:/system/lib/dsp/postprocessor_dualout.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/ringio.dll64P:/system/lib/dsp/ringio.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/usn.dll64P:/system/lib/dsp/usn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wbamrdec_sn.dll64P:/system/lib/dsp/wbamrdec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wbamrenc_sn.dll64P:/system/lib/dsp/wbamrenc_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wmadec_sn.dll64P:/system/lib/dsp/wmadec_sn.dll64P \
-    $(PRODUCT_PROPRIETARY)/lib/dsp/wmv9dec_sn.dll64P:/system/lib/dsp/wmv9dec_sn.dll64P \
     $(PRODUCT_PROPRIETARY)/lib/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \
     $(PRODUCT_PROPRIETARY)/lib/libarcsoftpe.so:/system/lib/libarcsoftpe.so \
     $(PRODUCT_PROPRIETARY)/lib/libarcsoft.so:/system/lib/libarcsoft.so \
