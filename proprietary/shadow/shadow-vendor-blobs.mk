@@ -165,7 +165,6 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/lib/libbridge.so:/system/lib/libbridge.so \
     $(PRODUCT_PROPRIETARY)/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
     $(PRODUCT_PROPRIETARY)/lib/libusc.so:/system/lib/libusc.so \
-    $(PRODUCT_PROPRIETARY)/lib/hw/lights.shadow.so:/system/lib/hw/lights.shadow.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/sensors.shadow.so:/system/lib/hw/sensors.shadow.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/gps.shadow.so:/system/lib/hw/gps.shadow.so
 
