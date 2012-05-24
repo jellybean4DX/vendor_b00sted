@@ -42,13 +42,19 @@ OUTFILE=out/target/product/droid2/$BUILD.zip
 MD5=out/target/product/droid2/$BUILD.zip.md5sum
 
 
-if [ $TYPE = "b" ]; then
+if [ $TYPE = "nightcap" ]; then
 	cp "$OUTFILE" ~/www/droid2/nightlies/"$BUILD".zip
 	cp "$MD5" ~/www/droid2/nightlies/"$BUILD".zip.md5sum
 else
 	cp "$OUTFILE" ~/www/droid2/"$BUILD".zip
 	cp "$MD5" ~/www/droid2/"$BUILD".zip.md5sum
 fi
+
+if [ $TYPE = "test" ]; then
+	cp "$OUTFILE" ~/www/tests/"$BUILD".zip
+	cp "$MD5" ~/www/tests/"$BUILD".zip.md5sum
+fi
+
 
 
 

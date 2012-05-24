@@ -43,7 +43,7 @@ OUTFILE=out/target/product/shadow/$BUILD.zip
 MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
 
-if [ $TYPE = "b" ]; then
+if [ $TYPE = "nightcap" ]; then
 	cp "$OUTFILE" ~/www/shadow/nightlies/"$BUILD".zip
 	cp "$MD5" ~/www/shadow/nightlies/"$BUILD".zip.md5sum
 else
