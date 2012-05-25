@@ -40,18 +40,18 @@ fi
 # Auto upload
 BUILD=` cat "vendor/b00sted/latest" | tail -1`
 
-OUTFILE=out/target/product/shadow/$BUILD.zip
-MD5=out/target/product/shadow/$BUILD.zip.md5sum
+OUTFILE=out/target/product/droid2we/$BUILD.zip
+MD5=out/target/product/droid2we/$BUILD.zip.md5sum
 
 #nightly
 if [ $TYPE = "nightcap" ]; then
-	cp "$OUTFILE" ~/www/shadow/nightlies/"$BUILD".zip
+	cp "$OUTFILE" ~/www/droid2we/nightlies/"$BUILD".zip
 #test
 elif [ $TYPE = "test" ]; then
 	cp "$OUTFILE" ~/www/tests/"$BUILD".zip
 else
 #public release
-	cp "$OUTFILE" ~/www/shadow/"$BUILD".zip
+	cp "$OUTFILE" ~/www/droid2we/"$BUILD".zip
 fi
 
 
