@@ -45,15 +45,12 @@ MD5=out/target/product/shadow/$BUILD.zip.md5sum
 #nightly
 if [ $TYPE = "nightcap" ]; then
 	cp "$OUTFILE" ~/www/shadow/nightlies/"$BUILD".zip
-	cp "$MD5" ~/www/shadow/nightlies/"$BUILD".zip.md5sum
 #test
 elif [ $TYPE = "test" ]; then
 	cp "$OUTFILE" ~/www/tests/"$BUILD".zip
-	cp "$MD5" ~/www/tests/"$BUILD".zip.md5sum
 else
 #public release
 	cp "$OUTFILE" ~/www/shadow/"$BUILD".zip
-	cp "$MD5" ~/www/shadow/"$BUILD".zip.md5sum
 fi
 
 
