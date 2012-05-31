@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/bin/firewall.sh:/system/bin/firewall.sh \
     $(PRODUCT_PROPRIETARY)/bin/ftmipcd:/system/bin/ftmipcd \
     $(PRODUCT_PROPRIETARY)/bin/gkilogd:/system/bin/gkilogd \
-    $(PRODUCT_PROPRIETARY)/bin/Hostapd:/system/bin/Hostapd \
     $(PRODUCT_PROPRIETARY)/bin/loadpreinstalls.sh:/system/bin/loadpreinstalls.sh \
     $(PRODUCT_PROPRIETARY)/bin/mdm_panicd:/system/bin/mdm_panicd \
     $(PRODUCT_PROPRIETARY)/bin/napics.sh:/system/bin/napics.sh \

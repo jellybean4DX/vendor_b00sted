@@ -36,7 +36,6 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt binaries and services
 PRODUCT_COPY_FILES += \
-    $(PRODUCT_PROPRIETARY)/bin/Hostapd:/system/bin/Hostapd \
     $(PRODUCT_PROPRIETARY)/bin/SaveBPVer:/system/bin/SaveBPVer \
     $(PRODUCT_PROPRIETARY)/bin/akmd2:/system/bin/akmd2 \
     $(PRODUCT_PROPRIETARY)/bin/ap_gain.bin:/system/bin/ap_gain.bin \

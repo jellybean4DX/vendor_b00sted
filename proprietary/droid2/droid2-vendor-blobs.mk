@@ -39,7 +39,6 @@ PRODUCT_COPY_FILES += \
 # All the blobs necessary for droid2
 PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/lib/libmoto_gps.so:/system/lib/libmoto_gps.so \
-    $(PRODUCT_PROPRIETARY)/bin/Hostapd:/system/bin/Hostapd \
     $(PRODUCT_PROPRIETARY)/bin/SaveBPVer:/system/bin/SaveBPVer \
     $(PRODUCT_PROPRIETARY)/bin/akmd2:/system/bin/akmd2 \
     $(PRODUCT_PROPRIETARY)/bin/ap_gain.bin:/system/bin/ap_gain.bin \
