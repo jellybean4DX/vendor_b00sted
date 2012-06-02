@@ -2,9 +2,7 @@
 PRODUCT_PACKAGES += \
        ThemeManager \
        ThemeChooser \
-       com.tmobile.themes \
-       Bubble \
-       Spearmint
+       com.tmobile.themes
        
 
 # ThemeChooser Permissions
