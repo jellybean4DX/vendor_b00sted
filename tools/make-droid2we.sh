@@ -10,9 +10,8 @@ DEVICE=droid2we
 REPO=$1
 CLEAN=$2
 CORE=$3
-TYPE=$4
+TYPE=$4 #nightly, test, or build
 sed -i "s|TYPE=.*|TYPE=${TYPE}|" vendor/b00sted/configs/common_versions.mk
-
 
 if [ $REPO = "y" ]; then
 	repo sync -j$CORE
@@ -20,19 +19,28 @@ else
 	echo "No repo sync. Make sure you have the latest changes."
 fi
 
-## Do this until we figure out why perms are dropped each repo sync
-chmod +x vendor/b00sted/tools/opticharger
-chmod +x vendor/b00sted/tools/squisher
-
-. build/envsetup.sh
-
-lunch b00stedICS_$DEVICE-userdebug
-
-if [ $CLEAN = "y" ]; then
-	make clean
-	time make -j$CORE bacon
+#CHECKOUT TO BRANCH FOR BUILD
+if [ $TYPE = "nightly" ]; then
+	cd frameworks/base
+	git checkout ics
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout ics
+	cd ~/b00sted
+elif [ $TYPE = "test" ]; then
+	cd frameworks/base
+	git checkout build
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout build
+	cd ~/b00sted
 else
-	time make -j$CORE bacon
+	cd frameworks/base
+	git checkout ics
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout ics
+	cd ~/b00sted
 fi
 
 
