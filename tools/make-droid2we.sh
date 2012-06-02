@@ -43,6 +43,20 @@ else
 	cd ~/b00sted
 fi
 
+# Do this until we figure out why perms are dropped each repo sync
+chmod +x vendor/b00sted/tools/opticharger
+chmod +x vendor/b00sted/tools/squisher
+
+. build/envsetup.sh
+
+lunch b00stedICS_$DEVICE-userdebug
+
+if [ $CLEAN = "y" ]; then
+	make clean
+	time make -j$CORE bacon
+else
+	time make -j$CORE bacon
+fi
 
 ############################################
 # Auto upload
