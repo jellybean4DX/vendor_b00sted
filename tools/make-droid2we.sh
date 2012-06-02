@@ -44,7 +44,7 @@ OUTFILE=out/target/product/droid2we/$BUILD.zip
 MD5=out/target/product/droid2we/$BUILD.zip.md5sum
 
 #nightly
-if [ $TYPE = "nightcap" ]; then
+if [ $TYPE = "nightly" ]; then
 	cp "$OUTFILE" ~/www/droid2we/nightlies/"$BUILD".zip
 #test
 elif [ $TYPE = "test" ]; then

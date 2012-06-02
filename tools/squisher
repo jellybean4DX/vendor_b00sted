@@ -89,10 +89,10 @@ rm -rf $REPACK/ota/recovery
 	MAJOR=` cat "vendor/b00sted/configs/common_versions.mk" | grep MAJOR | head -1 | cut -f2 -d '=' `
         REALDATE=`date +%F-%H_%M`
 
-	if [ $TYPE = "nightcap" ]; then
-		BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"_"$REALDATE"
+	if [ $TYPE = "nightly" ]; then
+		BUILD="$TARGET_PRODUCT"-"$REALDATE"
 	elif [ $TYPE = "test" ]; then
-		BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"_"$REALDATE"
+		BUILD="$TARGET_PRODUCT"-"$TYPE"-"$REALDATE"
 	else
         	BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"
 	fi
