@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Superuser \
     Superuser.apk \
+    GanOptimizer \
     su \
     audio_effects.conf
 
