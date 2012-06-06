@@ -22,10 +22,11 @@ OMAP3_PREBUILT := vendor/b00sted/prebuilt/omap3
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/frameworks
 
 # Common Blobs
+# test mms if working from source now
+#$(OMAP3_PREBUILT)/app/Mms.apk:system/app/Mms.apk 
 PRODUCT_COPY_FILES += \
     $(OMAP3_PREBUILT)/app/FMRadio.apk:system/app/FMRadio.apk \
     $(OMAP3_PREBUILT)/app/FMRadioService.apk:system/app/FMRadioService.apk \
-    $(OMAP3_PREBUILT)/app/Mms.apk:system/app/Mms.apk \
     $(OMAP3_PREBUILT)/bin/fmradioserver:system/bin/fmradioserver \
     $(OMAP3_PREBUILT)/etc/init.d/97lagfix:system/etc/init.d/97lagfix \
     $(OMAP3_PREBUILT)/etc/media_profiles.xml:system/etc/media_profiles.xml \
