@@ -20,28 +20,28 @@ else
 fi
 
 #CHECKOUT TO BRANCH FOR BUILD
-#if [ $TYPE = "nightly" ]; then
-#	cd frameworks/base
-#	git checkout ics
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout ics
-#	cd ~/b00sted
-#elif [ $TYPE = "test" ]; then
-#	cd frameworks/base
-#	git checkout build
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout build
-#	cd ~/b00sted
-#else
-#	cd frameworks/base
-#	git checkout ics
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout ics
-#	cd ~/b00sted
-#fi
+if [ $TYPE = "nightly" ]; then
+	cd frameworks/base
+	git checkout ics
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout ics
+	cd ~/b00sted
+elif [ $TYPE = "test" ]; then
+	cd frameworks/base
+	git checkout build
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout build
+	cd ~/b00sted
+else
+	cd frameworks/base
+	git checkout ics
+	cd ~/b00sted
+	cd packages/apps/Settings
+	git checkout ics
+	cd ~/b00sted
+fi
 
 ## Do this until we figure out why perms are dropped each repo sync
 chmod +x vendor/b00sted/tools/opticharger
