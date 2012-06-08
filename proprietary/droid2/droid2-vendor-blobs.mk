@@ -53,7 +53,6 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/bin/dmt:/system/bin/dmt \
     $(PRODUCT_PROPRIETARY)/bin/dund:/system/bin/dund \
     $(PRODUCT_PROPRIETARY)/bin/ecckeyd:/system/bin/ecckeyd \
-    $(PRODUCT_PROPRIETARY)/bin/fdisk:/system/bin/fdisk \
     $(PRODUCT_PROPRIETARY)/bin/firewall.sh:/system/bin/firewall.sh \
     $(PRODUCT_PROPRIETARY)/bin/fmradioserver:/system/bin/fmradioserver \
     $(PRODUCT_PROPRIETARY)/bin/ftmipcd:/system/bin/ftmipcd \
