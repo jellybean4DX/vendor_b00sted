@@ -85,22 +85,13 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 # If test build, attach date to differentiate between builds since will be same b#
-	TYPE=` cat "vendor/b00sted/configs/common_versions.mk" | grep TYPE | head -1 | cut -f2 -d '=' `
-	MAJOR=` cat "vendor/b00sted/configs/common_versions.mk" | grep MAJOR | head -1 | cut -f2 -d '=' `
-        REALDATE=`date +%F-%H_%M`
+	VERSION=` cat "vendor/b00sted/configs/common_versions.mk" | grep VERSION | head -1 | cut -f2 -d '=' `
+	
 
-	if [ $TYPE = "nightly" ]; then
-		BUILD="$TARGET_PRODUCT"-"$REALDATE"
-	elif [ $TYPE = "test" ]; then
-		BUILD="$TARGET_PRODUCT"-"$TYPE"-"$REALDATE"
-	else
-        	BUILD="$TARGET_PRODUCT"-"$TYPE"_"$MAJOR"
-	fi
-
-	OUTFILE=$OUT/$BUILD.zip
-	echo BUILD : "$BUILD"
+	OUTFILE=$OUT/$VERSION.zip
+	echo BUILD : "$VERSION"
 	# for auto upload 
-	echo "$BUILD" | cat >> vendor/b00sted/latest
+	echo "$VERSION" | cat >> vendor/b00sted/latest
 
 # Pack it up and sign
 printf "Zipping package..."

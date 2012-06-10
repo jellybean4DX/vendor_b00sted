@@ -13,16 +13,10 @@ BUILD_UTC_DATE=$(shell date +"%s")
 # Testing donoted b#'
 # Zip name is set in squisher based on vars below
 
-TYPE=build
-MAJOR=3
-REALDATE=`date +%F-%H_%M`
-ifeq ( $(TYPE), b ) 
+VERSION=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y") 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=$(TYPE)_$(MAJOR)-$(REALDATE)
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=$(TYPE)_$(MAJOR)
-endif
+ro.modversion=$(VERSION)
+
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
