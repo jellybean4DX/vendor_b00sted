@@ -56,13 +56,6 @@ PRODUCT_PACKAGES += \
     openvpn \
     Apollo
 
-# Bring in all audio files
-include frameworks/base/data/sounds/NewAudio.mk
-
-# Extra Ringtones
-include frameworks/base/data/sounds/AudioPackageNewWave.mk
-
-
 
 #Common Blobs 
 PRODUCT_COPY_FILES += \
