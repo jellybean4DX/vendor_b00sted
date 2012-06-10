@@ -8,6 +8,9 @@ $(call inherit-product, vendor/b00sted/configs/omap3.mk)
 $(call inherit-product, device/motorola/omap34com/device.mk)
 $(call inherit-product, device/motorola/omap34com/full_omap34com.mk)
 
+#Inherit the Bugless Beast!
+$(call inherit-product, vendor/pete/products/common.mk)
+
 #Release Name
 PRODUCT_RELEASE_NAME := Shadow
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
@@ -37,7 +40,7 @@ PRODUCT_COPY_FILES += $(shell \
   | tr '\n' ' ')
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := b00stedICS_shadow
+PRODUCT_NAME := bugl3SS_shadow
 PRODUCT_DEVICE := shadow
 PRODUCT_BRAND := verizon
 PRODUCT_MODEL := DROIDX

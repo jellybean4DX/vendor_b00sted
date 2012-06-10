@@ -19,29 +19,6 @@ else
 	echo "No repo sync. Make sure you have the latest changes."
 fi
 
-#CHECKOUT TO BRANCH FOR BUILD
-#if [ $TYPE = "nightly" ]; then
-#	cd frameworks/base
-#	git checkout ics
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout ics
-#	cd ~/b00sted
-#elif [ $TYPE = "test" ]; then
-#	cd frameworks/base
-#	git checkout build
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout build
-#	cd ~/b00sted
-#else
-#	cd frameworks/base
-#	git checkout ics
-#	cd ~/b00sted
-#	cd packages/apps/Settings
-#	git checkout ics
-#	cd ~/b00sted
-#fi
 
 ## Do this until we figure out why perms are dropped each repo sync
 chmod +x vendor/b00sted/tools/opticharger
@@ -49,7 +26,7 @@ chmod +x vendor/b00sted/tools/squisher
 
 . build/envsetup.sh
 
-lunch b00stedICS_$DEVICE-userdebug
+lunch bugl3SS_$DEVICE-userdebug
 
 if [ $CLEAN = "y" ]; then
 	make clean
@@ -68,13 +45,13 @@ MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
 #nightly
 if [ $TYPE = "nightly" ]; then
-	cp "$OUTFILE" ~/www/shadow/nightlies/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/shadow/nightlies/"$BUILD".zip
 #test
 elif [ $TYPE = "test" ]; then
-	cp "$OUTFILE" ~/www/tests/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/tests/"$BUILD".zip
 else
 #public release
-	cp "$OUTFILE" ~/www/shadow/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/shadow/"$BUILD".zip
 fi
 
 
