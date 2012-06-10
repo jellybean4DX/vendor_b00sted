@@ -39,12 +39,11 @@ PRODUCT_PACKAGES += \
     audio_effects.conf
 
 #TMo Theme Engine 
-include vendor/b00sted/configs/themes_common.mk
+#include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
     DSPManager \
-    FileManager \
     VoiceDialer \
     SoundRecorder \
     Basic \
@@ -54,7 +53,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     PhaseBeam \
-    AppWidgetPicker \
     openvpn \
     Apollo
 
