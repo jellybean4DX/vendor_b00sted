@@ -30,9 +30,9 @@ lunch bugl3SS_$DEVICE-userdebug
 
 if [ $CLEAN = "y" ]; then
 	make clean
-	time make -j$CORE bacon
+	time make -j$CORE 
 else
-	time make -j$CORE bacon
+	time make -j$CORE
 fi
 
 

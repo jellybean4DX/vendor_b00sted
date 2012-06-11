@@ -25,19 +25,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/dictionaries
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 COMMON_BOOTMENU := vendor/b00sted/prebuilt/common/bootmenu/common
 
-
-
-
-#Grab the CM packages // For now
-PRODUCT_PACKAGES += \
-    Development \
-    LatinIME \
-    Superuser \
-    Superuser.apk \
-    GanOptimizer \
-    su \
-    audio_effects.conf
-
 #TMo Theme Engine 
 #include vendor/b00sted/configs/themes_common.mk
 
