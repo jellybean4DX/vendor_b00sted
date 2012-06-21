@@ -30,9 +30,9 @@ lunch bugl3SS_$DEVICE-user
 
 if [ $CLEAN = "y" ]; then
 	make clean
-	time make -j$CORE 
+	time make -j$CORE otapackage
 else
-	time make -j$CORE
+	time make -j$CORE otapackage
 fi
 
 

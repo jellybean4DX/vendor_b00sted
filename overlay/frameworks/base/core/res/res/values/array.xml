@@ -21,6 +21,7 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
     <array name="shutdown_reboot_options" translatable="false">
         <item>@string/reboot_reboot</item>
+        <item>@string/reboot_bootmenu</item>
         <item>@string/reboot_bootloader</item>
     </array>
 </resources>
