@@ -1,8 +1,12 @@
-#!/bin/sh
+#!/bin/sh -x
 #
 # Squish a CM otapackage for distribution
 # cyanogen
 #
+# modified to work with user builds
+
+
+set
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -26,6 +30,8 @@ fi
 if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
     OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$USER.zip
 elif [ "$TARGET_BUILD_VARIANT" = "userdebug" ]; then
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip
+elif [ "$TARGET_BUILD_VARIANT" = "user" ]; then
     OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip
 else
     OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
