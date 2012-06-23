@@ -181,5 +181,4 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/lib/librds_util.so:/system/lib/librds_util.so \
     $(PRODUCT_PROPRIETARY)/lib/libsmiledetect.so:/system/lib/libsmiledetect.so \
     $(PRODUCT_PROPRIETARY)/lib/libusc.so:/system/lib/libusc.so \
-    $(PRODUCT_PROPRIETARY)/lib/hw/sensors.droid2we.so:/system/lib/hw/sensors.droid2we.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/gps.droid2we.so:/system/lib/hw/gps.droid2we.so

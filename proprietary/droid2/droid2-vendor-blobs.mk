@@ -185,6 +185,5 @@ PRODUCT_COPY_FILES += \
     $(PRODUCT_PROPRIETARY)/lib/libFMRadio.so:system/lib/libFMRadio.so \
     $(PRODUCT_PROPRIETARY)/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
     $(PRODUCT_PROPRIETARY)/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
-    $(PRODUCT_PROPRIETARY)/lib/hw/sensors.droid2.so:/system/lib/hw/sensors.droid2.so \
     $(PRODUCT_PROPRIETARY)/lib/hw/gps.droid2.so:/system/lib/hw/gps.droid2.so 
 
