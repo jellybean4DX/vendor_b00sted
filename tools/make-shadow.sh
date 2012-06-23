@@ -4,8 +4,6 @@
 # commands to run as follows from root dir:
 # . vendor/b00sted/tools/make.sh "# of cores used to run" "build type"
 ########################################################################
-#COMMON VAR
-SQUISHER=vendor/b00sted/tools/squisher
 # INPUT
 DEVICE=shadow
 REPO=$1
@@ -31,11 +29,9 @@ lunch bugl3SS_$DEVICE-user
 
 if [ $CLEAN = "y" ]; then
 	make clean
-	time make -j$CORE otapackage
-        $SQUISHER
+	time make -j$CORE bacon
 else
-	time make -j$CORE otapackage
-	$SQUISHER
+	time make -j$CORE bacon
 fi
 
 
