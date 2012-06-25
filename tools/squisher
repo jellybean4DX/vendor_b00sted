@@ -90,14 +90,11 @@ rm -rf $REPACK/ota/recovery
           -not -name "tiap*" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-# If test build, attach date to differentiate between builds since will be same b#
-	VERSION=` cat "vendor/b00sted/configs/common_versions.mk" | grep VERSION | head -1 | cut -f2 -d '=' `
-	
-
-	OUTFILE=$OUT/$VERSION.zip
-	echo BUILD : "$VERSION"
+	BUILD=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y")
+	OUTFILE=$OUT/$BUILD.zip
+	echo BUILD : "$BUILD"
 	# for auto upload 
-	echo "$VERSION" | cat >> vendor/b00sted/latest
+	echo "$BUILD" | cat >> vendor/b00sted/latest
 
 # Pack it up and sign
 printf "Zipping package..."
