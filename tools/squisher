@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 #
 # Squish a CM otapackage for distribution
 # cyanogen
@@ -90,11 +90,9 @@ rm -rf $REPACK/ota/recovery
           -not -name "tiap*" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-	BUILD=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y")
-	OUTFILE=$OUT/$BUILD.zip
-	echo BUILD : "$BUILD"
-	# for auto upload 
-	echo "$BUILD" | cat >> vendor/b00sted/latest
+	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
+	OUTFILE=$OUT/$MODVERSION.zip
+	echo BUILD : "$MODVERSION"
 
 # Pack it up and sign
 printf "Zipping package..."

@@ -5,17 +5,10 @@ BUILD_VERSION_TAGS=release-keys \
 USER=teamb00sted \
 BUILD_UTC_DATE=$(shell date +"%s")
 
-
-
-# Naming system
-# 
-# Public releases are donoted 'build_#'
-# Testing donoted b#'
-# Zip name is set in squisher based on vars below
-
-VERSION=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y") 
+#Set modversion and zip name
+MODVERSION=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y") 
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.modversion=$(VERSION)
+ro.modversion=$(MODVERSION)
 
 
 # Camera shutter sound property
