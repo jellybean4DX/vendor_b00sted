@@ -4,7 +4,7 @@ $(call inherit-product, device/motorola/shadow/shadow.mk)
 $(call inherit-product, vendor/b00sted/configs/common.mk)
 #Inherit common versions
 $(call inherit-product, vendor/b00sted/configs/common_versions.mk)
-# Inherit omap3 common
+# Inherit omap3 config
 $(call inherit-product, vendor/b00sted/configs/omap3.mk)
 #Inherit from omap34com
 $(call inherit-product, device/motorola/omap34com/device.mk)

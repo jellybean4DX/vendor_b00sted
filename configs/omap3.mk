@@ -1,13 +1,10 @@
 #
-# OMAP3 makefile
-# blobs common only to omap3 devices will be in here
-# This is separate from the omap3.mk in device trees(for now)
-#
-# TO-DO:: Find a way to make the product/DEVICE/ be for the device 
-# being built and not a set device in mk for the device omap3.mk 
-#
-# Copyright (C) 2011 The Android Open-Source Project
 # Copyright (C) 2012 BMc08GT
+#
+# OMAP3 Device Configs
+#
+# To be listed in each applicable OMAP3 device tree so that
+# OMAP34COM device.mk can call this for omap-zoom base
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,6 +18,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# This file includes all definitions that apply to ALL omap3 devices, and
+# are also specific to omap devices
+#
+# Everything in this directory will become public
 
 OMAP3_PREBUILT := vendor/b00sted/prebuilt/omap3
 PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/frameworks
@@ -39,3 +41,15 @@ PRODUCT_COPY_FILES += \
     $(OMAP3_PREBUILT)/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
     $(OMAP3_PREBUILT)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     $(OMAP3_PREBUILT)/usr/keylayout/sholes-keypad.kl:system/usr/keylayout/sholes-keypad.kl
+
+# Hardware composer configuration
+PRODUCT_COPY_FILES += \
+out/target/product/$(PRODUCT_DEVICE)/obj/lib/hwcomposer.omap3.so:system/vendor/lib/hw/hwcomposer.omap3.so \
+out/target/product/$(PRODUCT_DEVICE)/obj/lib/hwcomposer.omap3.so:system/lib/hw/hwcomposer.omap3.so
+
+ 
+
+$(call inherit-product, hardware/ti/omap3/omap3.mk)
+
+
+
