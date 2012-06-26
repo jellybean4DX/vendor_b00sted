@@ -36,21 +36,22 @@ fi
 
 
 ############################################
-# Auto upload
-BUILD=` cat "vendor/b00sted/latest" | tail -1`
+# Auto Upload
+BUILDPROP=out/target/product/shadow/system/build.prop
+MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $BUILDPROP `
 
-OUTFILE=out/target/product/shadow/$BUILD.zip
+OUTFILE=out/target/product/shadow/$MODVERSION.zip
 MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
 #nightly
 if [ $TYPE = "nightly" ]; then
-	cp "$OUTFILE" ~/www/bugless/shadow/nightlies/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/shadow/nightlies/"$MODVERSION".zip
 #test
 elif [ $TYPE = "test" ]; then
-	cp "$OUTFILE" ~/www/bugless/tests/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/tests/"$MODVERSION".zip
 else
 #public release
-	cp "$OUTFILE" ~/www/bugless/shadow/"$BUILD".zip
+	cp "$OUTFILE" ~/www/bugless/shadow/"$MODVERSION".zip
 fi
 
 

@@ -1,6 +1,10 @@
 #
 # OMAP3 makefile
 # blobs common only to omap3 devices will be in here
+# This is separate from the omap3.mk in device trees(for now)
+#
+# TO-DO:: Find a way to make the product/DEVICE/ be for the device 
+# being built and not a set device in mk for the device omap3.mk 
 #
 # Copyright (C) 2011 The Android Open-Source Project
 # Copyright (C) 2012 BMc08GT
