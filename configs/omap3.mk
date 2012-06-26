@@ -43,9 +43,11 @@ PRODUCT_COPY_FILES += \
     $(OMAP3_PREBUILT)/usr/keylayout/sholes-keypad.kl:system/usr/keylayout/sholes-keypad.kl
 
 # Hardware composer configuration
+ifeq ($(PRODUCT_DEVICE), shadow)
 PRODUCT_COPY_FILES += \
-out/target/product/$(PRODUCT_DEVICE)/obj/lib/hwcomposer.omap3.so:system/vendor/lib/hw/hwcomposer.omap3.so \
-out/target/product/$(PRODUCT_DEVICE)/obj/lib/hwcomposer.omap3.so:system/lib/hw/hwcomposer.omap3.so
+        out/target/product/shadow/obj/lib/hwcomposer.omap3.so:system/vendor/lib/hw/hwcomposer.omap3.so \
+        out/target/product/shadow/obj/lib/hwcomposer.omap3.so:system/lib/hw/hwcomposer.omap3.so
+endif
 
  
 
