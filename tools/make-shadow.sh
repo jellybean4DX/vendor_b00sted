@@ -10,7 +10,6 @@ REPO=$1
 CLEAN=$2
 CORE=$3
 TYPE=$4 #nightly, test, or build
-sed -i "s|TYPE=.*|TYPE=${TYPE}|" vendor/b00sted/configs/common_versions.mk
 
 if [ $REPO = "y" ]; then
 	repo sync -j$CORE
@@ -38,7 +37,7 @@ fi
 ############################################
 # Auto Upload
 BUILDPROP=out/target/product/shadow/system/build.prop
-MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $BUILDPROP `
+MODVERSION=` sed -n -e'/ro\.modversion/s/^.*=//p' $BUILDPROP `
 
 OUTFILE=out/target/product/shadow/$MODVERSION.zip
 MD5=out/target/product/shadow/$BUILD.zip.md5sum
