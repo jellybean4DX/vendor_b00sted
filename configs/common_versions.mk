@@ -6,7 +6,7 @@ USER=teamb00sted \
 BUILD_UTC_DATE=$(shell date +"%s")
 
 #Set modversion and zip name
-MODVERSION=$(TARGET_PRODUCT)_$(shell date +"%m-%d-%y") 
+MODVERSION=$(TARGET_PRODUCT)_$(shell date +"%F-%H-%M") 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.modversion=$(MODVERSION)
 
