@@ -1,4 +1,4 @@
-add_lunch_combo bugl3SS_shadow-user
+add_lunch_combo bugl3SS_shadow-userdebug
 #add_lunch_combo b00stedICS_droid2-userdebug
 #add_lunch_combo b00stedICS_droid2we-userdebug
 #add_lunch_combo b00stedICS_htc_inc-userdebug
