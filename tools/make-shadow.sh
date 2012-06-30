@@ -24,7 +24,7 @@ chmod +x vendor/b00sted/tools/squisher
 
 . build/envsetup.sh
 
-lunch bugl3SS_$DEVICE-userdebug
+lunch bugl3SS_$DEVICE-user
 
 if [ $CLEAN = "y" ]; then
 	make clean
