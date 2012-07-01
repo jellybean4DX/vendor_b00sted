@@ -24,7 +24,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/common
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 #TMo Theme Engine 
-#include vendor/b00sted/configs/themes_common.mk
+include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
 
 #Common Blobs 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PREBUILT)/app/ApexLauncher_v1.2.2.apk:system/app/ApexLauncher_v1.2.2.apk \
+    $(COMMON_PREBUILT)/app/ApexLauncher_v1.2.3.apk:system/app/ApexLauncher_v1.2.3.apk \
     $(COMMON_PREBUILT)/bin/sysinit:system/bin/sysinit \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
@@ -130,9 +130,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
         video.accelerate.hw=1 \
         persist.sys.use_dithering=0 \
         ro.kernel.checkjni=0
-#inherit bootmenu configs
--include vendor/b00sted/configs/bootmenu.mk
-
-# Inherit common build version
--include vendor/b00sted/configs/common_versions.mk
 

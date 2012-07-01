@@ -1,17 +1,17 @@
 # Inherit from shadow device
 $(call inherit-product, device/motorola/shadow/shadow.mk)
+#Inherit from omap34com
+$(call inherit-product, device/motorola/omap34com/device.mk)
+$(call inherit-product, device/motorola/omap34com/full_omap34com.mk)
 # Inherit b00sted common
 $(call inherit-product, vendor/b00sted/configs/common.mk)
 #Inherit common versions
 $(call inherit-product, vendor/b00sted/configs/common_versions.mk)
 # Inherit omap3 config
 $(call inherit-product, vendor/b00sted/configs/omap3.mk)
-#Inherit from omap34com
-$(call inherit-product, device/motorola/omap34com/device.mk)
-$(call inherit-product, device/motorola/omap34com/full_omap34com.mk)
+#Inherit b00tmenu
+$(call inherit-product, vendor/b00sted/configs/bootmenu.mk)
 
-#Inherit the Bugless Beast!
-$(call inherit-product, vendor/pete/products/common.mk)
 
 #Release Name
 PRODUCT_RELEASE_NAME := Shadow
