@@ -131,3 +131,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.sys.use_dithering=0 \
         ro.kernel.checkjni=0
 
+#BOOTMENU modules || common
+PRODUCT_COPY_FILES += $(shell \
+    find $(COMMON_PREBUILT)/bootmenu/common/lib/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+    | tr '\n' ' ')
