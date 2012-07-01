@@ -32,6 +32,8 @@ CLOBBER=0
 CLEAN=0
 CCACHE=0
 UL_TYPE=0
+BOOTMENU=0
+LINARO_BUILD=0
 
 
 
@@ -57,10 +59,12 @@ fi
 
 function print_help() {
 cat <<EOF
-Usage: `basename $0` -chksu -p <path> -t <target>|"<target> <target>"
+Usage: `basename $0` -bchklsu -p <path> -t <target>|"<target> <target>"
 
 Options:
+-b Build bootmenu
 -h show this help
+-l Linaro build
 -k clobber tree
 -p directory(path) for upload
 -s sync repo
@@ -115,10 +119,12 @@ if [ "$1" == "help" ]; then
 	print_help; bail;
 fi
 
-while getargs ":hkpsuy:t:" opt; do
+while getargs ":bhklpsuy:t:" opt; do
 	case $arg in
+		b) BOOTMENU=1;
 		h) print_help; bail;
 		k) CLOBBER=1
+		l) LINARO-BUILD=1
 		p) UL_DIR=${UL_DIR}-$OPTARG;;
 		s) SYNC=1;;
 		u) CCACHE=1
@@ -157,6 +163,10 @@ for (( ii=0 ; ii < ${#TARGETLIST[@]} ; ii++ )) ; do
 
 	echo "CLEANING: $target"
 	    make clean || { log_fail clean $target; continue; }
+
+	if [ $LINARO_BUILD -eq 1 ]; then
+        	buildargs+=" LINARO_BUILD=true"
+    	fi
 
 	echo "BUILDING: $target with $buildargs"
 	    schedtool -B -n 5 -e ionice -n 5 make -j 10 $buildargs || { log_fail mka $target; continue; }

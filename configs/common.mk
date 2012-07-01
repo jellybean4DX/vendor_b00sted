@@ -24,7 +24,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/common
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 #TMo Theme Engine 
-include vendor/b00sted/configs/themes_common.mk
+#include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
@@ -131,3 +131,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.sys.use_dithering=0 \
         ro.kernel.checkjni=0
 
+#BOOTMENU modules || common
+PRODUCT_COPY_FILES += $(shell \
+    find $(COMMON_PREBUILT)/bootmenu/common/lib/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+    | tr '\n' ' ')
