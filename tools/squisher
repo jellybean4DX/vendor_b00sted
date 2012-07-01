@@ -65,6 +65,12 @@ cd $REPACK/ota/system/app
 find ./ -name \*.apk | $XARGS $OPTICHARGER
 )
 
+# Bootmenu and repack cleanup
+if [ -f $ANDROID_BUILD_TOP/vendor/b00sted/tools/squisher.sh ]; then
+        echo "squisher.sh..."
+        . $ANDROID_BUILD_TOP/vendor/b00sted/tools/squisher.sh
+fi
+
 # Fix build.prop
 $SED -i \
 	-e '/ro\.kernel\.android\.checkjni/d' \

@@ -10,7 +10,8 @@ $(call inherit-product, vendor/b00sted/configs/common_versions.mk)
 # Inherit omap3 config
 $(call inherit-product, vendor/b00sted/configs/omap3.mk)
 #Inherit b00tmenu
-$(call inherit-product, vendor/b00sted/configs/bootmenu.mk)
+# Testing EncounterCM compiling method
+#$(call inherit-product, vendor/b00sted/configs/bootmenu.mk)
 
 
 #Release Name
