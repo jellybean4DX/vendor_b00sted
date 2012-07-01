@@ -6,7 +6,6 @@ DEVICE_TOP=$ANDROID_BUILD_TOP/device/motorola/omap34com
 
 # TODO: find way to make this work across all devices in bootmenu dir using a var
 DEVICE_HIJACK=$ANDROID_BUILD_TOP/device/motorola/shadow/prebuilt/etc/hijack-boot/newboot
-MODULE_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/common/bootmenu/shadow/lib/modules
 VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/common/bootmenu
 
 # add an empty script to prevent logcat errors (moto init.rc)
@@ -40,9 +39,9 @@ mkdir -p $REPACK/ota/system/bootmenu/binary
 cp -rf $ANDROID_BUILD_TOP/external/bootmenu/images $REPACK/ota/system/bootmenu/images
 
 mkdir -p $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/cpufreq_*.ko $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/symsearch.ko $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/overclock.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $VENDOR_TOP/shadow/lib/modules/cpufreq_*.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $VENDOR_TOP/common/lib/modules/symsearch.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $VENDOR_TOP/common/lib/modules/overclock.ko $REPACK/ota/system/bootmenu/ext/modules
 
 mkdir -p $REPACK/ota/system/bootmenu/recovery/sbin
 	cp -rfd $OUT/recovery/root/sbin/* $REPACK/ota/system/bootmenu/recovery/sbin
