@@ -6,8 +6,8 @@ DEVICE_TOP=$ANDROID_BUILD_TOP/device/motorola/omap34com
 
 # TODO: find way to make this work across all devices in bootmenu dir using a var
 DEVICE_HIJACK=$ANDROID_BUILD_TOP/device/motorola/shadow/prebuilt/etc/hijack-boot/newboot
-MODULE_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/bootmenu/shadow/lib/modules
-VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/bootmenu
+MODULE_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/common/bootmenu/shadow/lib/modules
+VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/b00sted/prebuilt/common/bootmenu
 
 # add an empty script to prevent logcat errors (moto init.rc)
 touch $REPACK/ota/system/bin/mount_ext3.sh
