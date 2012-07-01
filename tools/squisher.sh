@@ -40,9 +40,9 @@ mkdir -p $REPACK/ota/system/bootmenu/binary
 cp -rf $ANDROID_BUILD_TOP/external/bootmenu/images $REPACK/ota/system/bootmenu/images
 
 mkdir -p $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/modules/cpufreq_*.ko $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/modules/symsearch.ko $REPACK/ota/system/bootmenu/ext/modules
-	cp -f $MODULE_TOP/modules/overclock.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $MODULE_TOP/cpufreq_*.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $MODULE_TOP/symsearch.ko $REPACK/ota/system/bootmenu/ext/modules
+	cp -f $MODULE_TOP/overclock.ko $REPACK/ota/system/bootmenu/ext/modules
 
 mkdir -p $REPACK/ota/system/bootmenu/recovery/sbin
 	cp -rfd $OUT/recovery/root/sbin/* $REPACK/ota/system/bootmenu/recovery/sbin
