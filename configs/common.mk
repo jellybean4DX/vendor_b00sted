@@ -24,7 +24,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/common
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 #TMo Theme Engine 
-include vendor/b00sted/configs/themes_common.mk
+#include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
 PRODUCT_PACKAGES += \
