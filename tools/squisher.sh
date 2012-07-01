@@ -9,8 +9,8 @@ DEVICE_TOP=$ANDROID_BUILD_TOP/device/motorola/omap34com
 touch $REPACK/ota/system/bin/mount_ext3.sh
 chmod +x $REPACK/ota/system/bin/mount_ext3.sh
 
-# prebuilt boot, devtree, logo & updater-script
-rm -f $REPACK/ota/boot.img
+# Bootmenu cp files
+
 
 mkdir -p $REPACK/ota/system/bootmenu
 	cp -rf $DEVICE_TOP/bootmenu/* $REPACK/ota/system/bootmenu/
