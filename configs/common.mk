@@ -24,22 +24,28 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/b00sted/overlay/common
 COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 
 #TMo Theme Engine 
-#include vendor/b00sted/configs/themes_common.mk
+include vendor/b00sted/configs/themes_common.mk
 
 # Optional packages
+# CM and AOSP
 PRODUCT_PACKAGES += \
-    DSPManager \
-    VoiceDialer \
-    SoundRecorder \
+    Apollo \
+    audio_effects.conf \
     Basic \
-    NoiseField \
+    DSPManager \
     Galaxy4 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    VisualizationWallpapers \
-    PhaseBeam \
+    NoiseField \
     openvpn \
-    Apollo
+    PhaseBeam \
+    SoundRecorder \
+    Superuser \
+    Superuser.apk \
+    su \
+    VisualizationWallpapers \
+    VoiceDialer 
+    
 
 
 #Common Blobs 
