@@ -24,7 +24,7 @@ chmod +x vendor/b00sted/tools/squisher
 
 . build/envsetup.sh
 
-lunch 0map_$DEVICE-userdebug
+lunch Omap_$DEVICE-userdebug
 
 if [ $CLEAN = "y" ]; then
 	make clean
