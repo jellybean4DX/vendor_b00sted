@@ -95,7 +95,6 @@ echo "${FAILLIST[$FAILNUM]}" | tee -a $REPORT_FILE
 function bail() {
     [ -z "$1" ] && exit
 echo "$1"
-    exit
 }
 
 # Requires TIMESTART=`date +%s` at beginning of file
