@@ -9,7 +9,6 @@ DEVICE=shadow
 REPO=$1
 CLEAN=$2
 CORE=$3
-TYPE=$4 #nightly, test, or build
 
 if [ $REPO = "y" ]; then
 	repo sync -j$CORE
