@@ -42,16 +42,7 @@ MODVERSION=` sed -n -e'/ro\.modversion/s/^.*=//p' $BUILDPROP `
 OUTFILE=out/target/product/shadow/$MODVERSION.zip
 MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
-#nightly
-if [ $TYPE = "nightly" ]; then
-	cp "$OUTFILE" ~/www/bugless/shadow/nightlies/"$MODVERSION".zip
-#test
-elif [ $TYPE = "test" ]; then
-	cp "$OUTFILE" ~/www/bugless/tests/"$MODVERSION".zip
-else
-#public release
-	cp "$OUTFILE" ~/www/bugless/shadow/"$MODVERSION".zip
-fi
+cp "$OUTFILE" ~/www/0map/"$MODVERSION".zip
 
 
 
