@@ -192,4 +192,3 @@ if [ -d `dirname $REPORT_FILE` ]; then
 	cp `dirname $REPORT_FILE` ${UL_DIR}/logs/
 fi
 
-exit
