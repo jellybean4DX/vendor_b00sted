@@ -116,11 +116,11 @@ if [ "$1" == "help" ]; then
 	print_help; bail;
 fi
 
-while getargs ":hklpsu:t:" opt; do
-	case $arg in
+while getopts ":hklpsu:t:" opt; do
+	case $opt in
 		h) print_help; bail;;
 		k) CLOBBER=1;;
-		l) LINARO-BUILD=1;;
+		l) LINARO_BUILD=1;;
 		p) UL_DIR=${UL_DIR}-$OPTARG;;
 		s) SYNC=1;;
 		u) CCACHE=1;;
