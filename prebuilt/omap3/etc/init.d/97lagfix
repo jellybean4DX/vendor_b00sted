@@ -111,6 +111,4 @@ if [ $DEBUG_ECHO -eq "0" ]; then
   echo ""
 fi;
 
-####Set window animations to fast
-sqlite3 /data/data/com.android.providers.settings/databases/settings.db "replace into "system" values(27,'transition_animation_scale','0.5')"; sqlite3 /data/data/com.android.providers.settings/databases/settings.db "replace into "system" values(26,'window_animation_scale','0.5')"; 
 
