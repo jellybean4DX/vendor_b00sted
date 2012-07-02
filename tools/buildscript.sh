@@ -10,7 +10,7 @@
 
 # Uploading
 # Rsync auto-uploads the www dir to server 
-UL_DIR="~/www/b0map/"
+UL_DIR="~/www/0map/"
 
 
 
@@ -49,7 +49,7 @@ if [ -e vendor/$SHORT/vendorsetup.sh ];  then
 	# at this point every other entry is add_lunch_combo, so remove them
 	TARGETLIST=(${TARGETLST[@]/add_lunch_combo/})
 	# the rest of this script relies on uniform naming, ie shadow
-	# bugl3SS_shadow-userdebug WILL NOT work so remove pre/post fixes
+	# 0map_shadow-userdebug WILL NOT work so remove pre/post fixes
 	TARGETLIST=(${TARGETLIST[@]#*_})
 	TARGETLIST=(${TARGETLIST[@]%-*})
 else
@@ -58,7 +58,7 @@ fi
 
 function print_help() {
 cat <<EOF
-Usage: `basename $0` -chklsu -p <path> -t <target>|"<target> <target>"
+Usage: `basename $0` -hlksu -p <path> -t <target>|"<target> <target>"
 
 Options:
 -h show this help
