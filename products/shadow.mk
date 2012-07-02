@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += $(shell \
   | tr '\n' ' ')
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := bugl3SS_shadow
+PRODUCT_NAME := 0map_shadow
 PRODUCT_DEVICE := shadow
 PRODUCT_BRAND := verizon
 PRODUCT_MODEL := DROIDX
