@@ -32,7 +32,6 @@ CLOBBER=0
 CLEAN=0
 CCACHE=0
 UL_TYPE=0
-BOOTMENU=0
 LINARO_BUILD=0
 
 
@@ -59,10 +58,9 @@ fi
 
 function print_help() {
 cat <<EOF
-Usage: `basename $0` -bchklsu -p <path> -t <target>|"<target> <target>"
+Usage: `basename $0` -chklsu -p <path> -t <target>|"<target> <target>"
 
 Options:
--b Build bootmenu
 -h show this help
 -l Linaro build
 -k clobber tree
@@ -119,15 +117,14 @@ if [ "$1" == "help" ]; then
 	print_help; bail;
 fi
 
-while getargs ":bhklpsuy:t:" opt; do
+while getargs ":hklpsu:t:" opt; do
 	case $arg in
-		b) BOOTMENU=1;
-		h) print_help; bail;
-		k) CLOBBER=1
-		l) LINARO-BUILD=1
+		h) print_help; bail;;
+		k) CLOBBER=1;;
+		l) LINARO-BUILD=1;;
 		p) UL_DIR=${UL_DIR}-$OPTARG;;
 		s) SYNC=1;;
-		u) CCACHE=1
+		u) CCACHE=1;;
 		t) TARGETLIST=($OPTARG);;
 		\?) echo "Invalid option -$OPTARG"; print_help; bail;;
 		:) echo "Option -$OPTARG requires an argument."; bail;;
