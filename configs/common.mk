@@ -46,11 +46,16 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     VoiceDialer 
     
+# Bring in all audio files
+include frameworks/base/data/sounds/NewAudio.mk
+
+# Extra Ringtones
+include frameworks/base/data/sounds/AudioPackageNewWave.mk
 
 
 #Common Blobs 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PREBUILT)/app/ApexLauncher_v1.2.3.apk:system/app/ApexLauncher_v1.2.3.apk \
+    $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     $(COMMON_PREBUILT)/bin/sysinit:system/bin/sysinit \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
