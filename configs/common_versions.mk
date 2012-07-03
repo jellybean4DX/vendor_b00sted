@@ -7,7 +7,7 @@ BUILD_UTC_DATE=$(shell date +"%s")
 
 #Set modversion and zip name
 # pr0ject-0map_device-date.zip
-MODVERSION=pr0ject-$(TARGET_PRODUCT)-$(shell date +"%F-%H-%M") 
+MODVERSION=pr0ject-0$(TARGET_PRODUCT)-$(shell date +"%F-%H-%M") 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.modversion=$(MODVERSION)
 
