@@ -28,9 +28,6 @@ PRODUCT_COPY_FILES += \
 	vendor/b00sted/proprietary/ti_sgx_es5.x/libsrv_init.so:/system/lib/libsrv_init.so \
 	vendor/b00sted/proprietary/ti_sgx_es5.x/libPVRScopeServices.so:/system/lib/libPVRScopeServices.so \
 	vendor/b00sted/proprietary/ti_sgx_es5.x/pvrsrvctl:/system/bin/pvrsrvctl \
-	vendor/b00sted/proprietary/ti_sgx_es5.x/pvrsrvinit:/system/bin/pvrsrvinit
-
-# imgtec leftover libs needed
-PRODUCT_COPY_FILES += \
+	vendor/b00sted/proprietary/ti_sgx_es5.x/pvrsrvinit:/system/bin/pvrsrvinit \
 	vendor/b00sted/proprietary/ti_sgx_es5.x/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \
         vendor/b00sted/proprietary/ti_sgx_es5.x/libgles2_texture_stream.so:system/lib/egl/libgles2_texture_stream.so
