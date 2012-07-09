@@ -346,11 +346,24 @@ def WriteFullOTAPackage(input_zip, output_zip):
 #    ts = GetBuildProp("ro.build.date.utc", input_zip)
 #    script.AssertOlderBuild(ts)
 
-  script.Print("-=    b00stedICS    =-")
-  script.Print("      ----------     ")
-  script.Print("     Brought to you by:     ")
-  script.Print(" BMc08GT and firstEncounter     ")
-  script.Print("                     ")
+      script.Print("    _____                    ________        _____ ")
+      script.Print("   /    /\                  /    /::\\      /    /\ ")    
+      script.Print("  /    /::\          ___   /____/::::\\    /    /:\\ ")
+      script.Print(" /    /::\:\        /__/\\\\  \\:::/\:\\  /    /:::\\ ")
+      script.Print("/____/::/ \:\      |  |::\\\\  \\:/ /::\\/    /::/\:\\ ")
+      script.Print("\\ p\\:\   \:\     |  |:|:\\\\  \\\/::::\\___/::/  \:\\ ")  
+      script.Print(" \\ r\\:\   \:\  __|__|:|\:\\\\  \\::/\::\\  \\:\  /::\\ ")
+      script.Print("  \\ 0\\:\   \:\/__/::::| \:\\\\  \\:\ \__\\  \\:\/:::// ")
+      script.Print("   \\ j\\:\  /:/\\  \\:\\~~\_\\\\  \\:\    \\  \\::::// ")
+      script.Print("    \\ e\\:\/:/  \\  \\:\\      \\  \\:\    \\  \\::// ")
+      script.Print("     \\ c\\::/    \\  \\:\\      \\  \\:\    \\  \\// ")
+      script.Print("      \\_t\\/      \\  \\:\\      \\__\\/     \\  \\ ")      
+      script.Print("                    \\__\\/                    \\  \\ ")
+      script.Print("                                                \\  \\ ")
+      script.Print("        pr0ject 0map                             \\  \\ ")
+      script.Print("          ....bridging the gap between            \\__\\ ") 
+      script.Print("                              AOSP and CM9 ")        
+
 
 # kernel check...
 #  script.Print(" Checking Kernel Version...  ")
@@ -372,29 +385,29 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   CopyUtilityFiles(input_zip, output_zip)
 
-  script.Print(" Formatting /system... ")
+  script.Print(" Time for the /system TuneUp... ")
   script.RunFormatAndTuneSystem()
   
   script.Print("  ")
-  script.Print(" Mounting /system... ")
+  script.Print(" Raise /system up... ")
   script.Mount("/system")
 
   script.Print("  ")
-  script.Print(" Installing /system... ")
+  script.Print(" Drop the new /system in... ")
   script.UnpackPackageDir("system", "/system")
   symlinks = CopySystemFiles(input_zip, output_zip)
 
   script.Print("  ")
-  script.Print(" Creating Symlinks... ")
+  script.Print(" Hook up the Symlinks to new /system... ")
   script.MakeSymlinks(symlinks)
   
   script.Print("  ")
-  script.Print(" Setting Permissions... ")
+  script.Print(" Add the oil and permissions... ")
   Item.GetMetadata(input_zip)
   Item.Get("system").SetPermissions(script)
 
   script.Print(" ")
-  script.Print(" Setting BootMenu Up... ")
+  script.Print(" Add the Turbo... ")
   script.SetPermissionsRecursive("/system/etc/init.d", 0, 0, 0755, 0555)
   script.SetPermissionsRecursive("/system/bootmenu", 0, 0, 0755, 0755)
   script.SetPermissionsRecursive("/system/lib/modules", 0, 0, 0755, 0644)
@@ -410,7 +423,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.RunVerifyCachePartitionSize()
   
   script.Print("  ")
-  script.Print(" Finishing Installation... ")
+  script.Print(" Finalizing Overhaul... ")
   script.Mount("/data")
   script.RunFinalReleaseUtils()
 
