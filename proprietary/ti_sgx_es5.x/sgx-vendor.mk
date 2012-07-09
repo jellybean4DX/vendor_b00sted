@@ -32,6 +32,6 @@ PRODUCT_COPY_FILES += \
 	
 # imgtec libs that still need to be included for now
 PRODUCT_COPY_FILES += \
-        vendor/b00sted/proprietary/ti_sgx_es5.x/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \	  	
+        vendor/b00sted/proprietary/ti_sgx_es5.x/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \
         vendor/b00sted/proprietary/ti_sgx_es5.x/libgles2_texture_stream.so:system/lib/egl/libgles2_texture_stream.so \
         vendor/b00sted/proprietary/ti_sgx_es5.x/libHPImgApi.so:system/lib/libHPImgApi.so
