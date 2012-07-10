@@ -28,27 +28,14 @@ COMMON_PREBUILT := vendor/b00sted/prebuilt/common
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     Basic \
-    Galaxy4 \
-    LiveWallpapers \
-    LiveWallpapersPicker \
     MusicFX \
-    NoiseField \
     openvpn \
-    PhaseBeam \
     SoundRecorder \
     Superuser \
     Superuser.apk \
     su \
-    VisualizationWallpapers \
     VoiceDialer 
     
-# Bring in all audio files
-include frameworks/base/data/sounds/NewAudio.mk
-
-# Extra Ringtones
-include frameworks/base/data/sounds/AudioPackageNewWave.mk
-
-
 #Common Blobs 
 PRODUCT_COPY_FILES += \
     $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
