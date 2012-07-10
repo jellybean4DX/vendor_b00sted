@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     
 #Common Blobs 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PREBUILT)/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     $(COMMON_PREBUILT)/bin/sysinit:system/bin/sysinit \
     $(COMMON_PREBUILT)/etc/resolv.conf:system/etc/resolv.conf \
     $(COMMON_PREBUILT)/etc/sysctl.conf:system/etc/sysctl.conf \
