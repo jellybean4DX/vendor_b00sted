@@ -23,7 +23,7 @@ chmod +x vendor/b00sted/tools/squisher
 
 . build/envsetup.sh
 
-lunch map_$DEVICE-userdebug
+lunch $DEVICE-userdebug
 
 if [ $CLEAN = "y" ]; then
 	make clean
@@ -41,7 +41,7 @@ MODVERSION=` sed -n -e'/ro\.modversion/s/^.*=//p' $BUILDPROP `
 OUTFILE=out/target/product/shadow/$MODVERSION.zip
 MD5=out/target/product/shadow/$BUILD.zip.md5sum
 
-cp "$OUTFILE" ~/www/0map/"$MODVERSION".zip
+cp "$OUTFILE" ~/www/jelly/"$MODVERSION".zip
 
 
 
