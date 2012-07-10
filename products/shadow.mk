@@ -10,7 +10,7 @@ $(call inherit-product, vendor/b00sted/configs/common_versions.mk)
 # Inherit omap3 config
 $(call inherit-product, vendor/b00sted/configs/omap3.mk)
 #Inherit b00tmenu
-$(call inherit-product, vendor/b00sted/configs/bootmenu.mk)
+#$(call inherit-product, vendor/b00sted/configs/bootmenu.mk)
 
 
 #Release Name
@@ -29,20 +29,20 @@ PRODUCT_COPY_FILES += \
 $(COMMON_PREBUILT)/media/bootanimation.zip:system/media/bootanimation.zip
 
 #BOOTMENU recovery files
-PRODUCT_COPY_FILES += \
-    $(PRODUCT_BOOTMENU)/recovery/cwm-recovery.zip:/system/bootmenu/recovery/cwm-recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/recovery.zip:/system/bootmenu/recovery/recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/rzr-recovery.zip:/system/bootmenu/recovery/rzr-recovery.zip \
-    $(PRODUCT_BOOTMENU)/recovery/update-binary:/system/bootmenu/recovery/update-binary 
+#PRODUCT_COPY_FILES += \
+#    $(PRODUCT_BOOTMENU)/recovery/cwm-recovery.zip:/system/bootmenu/recovery/cwm-recovery.zip \
+#    $(PRODUCT_BOOTMENU)/recovery/recovery.zip:/system/bootmenu/recovery/recovery.zip \
+#    $(PRODUCT_BOOTMENU)/recovery/rzr-recovery.zip:/system/bootmenu/recovery/rzr-recovery.zip \
+#    $(PRODUCT_BOOTMENU)/recovery/update-binary:/system/bootmenu/recovery/update-binary 
         
 #BOOTMENU modules || shadow 
-PRODUCT_COPY_FILES += $(shell \
-  find $(COMMON_PREBUILT)/bootmenu/shadow/lib/modules -name '*.ko' \
-  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-  | tr '\n' ' ')
+#PRODUCT_COPY_FILES += $(shell \
+#  find $(COMMON_PREBUILT)/bootmenu/shadow/lib/modules -name '*.ko' \
+#  | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+#  | tr '\n' ' ')
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := map_shadow
+PRODUCT_NAME := shadow
 PRODUCT_DEVICE := shadow
 PRODUCT_BRAND := verizon
 PRODUCT_MODEL := DROIDX
